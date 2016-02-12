@@ -1,0 +1,4 @@
+{$= "text/plain" @setMimeType 9 "a" @tparamSet $}Script for testing if the server has made multiple threads. 
+Takes a long time to finish.
+{$ FOR i 1 10000000 1 $}{$= "a" 5 @tparamGet 6 + "a" @tparamSet $}{$END$}
+{$= "a" 50 @tparamGet$}

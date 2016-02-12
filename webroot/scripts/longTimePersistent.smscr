@@ -1,0 +1,5 @@
+{$= "text/plain" @setMimeType 9 "a" @pparamSet $}Script for testing multiple threads. 
+The result can vary if more than one version of this script is run at the same time. 
+Takes a long time to finish.
+{$ FOR i 1 10000000 1 $}{$= "a" 5 @pparamGet 6 + "a" @pparamSet $}{$END$}
+{$= "a" 50 @pparamGet$}

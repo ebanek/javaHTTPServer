@@ -1,0 +1,19 @@
+{$= "image/png" @setMimeType 
+	"image/jpeg" @setMimeType $}Short FOR:
+
+{$ FOR i 1 5 $}{$= "Step " i " " i 5.0 / "0.##" @decfmt $}
+{$ END $}
+ 
+{$ FOR s 1 5 $}{$= s @dup + $} {$END $}
+
+Stepped for (integers)
+{$ FOR s 1 10 2 $}{$= s 5 / "#.#####" @decfmt $} {$END $}
+
+Float start (making rest as well)
+{$ FOR s 1.1 10 2 $}{$= s 5 - $} {$END $}
+
+Float ending (integers expected since float is only for comparison)
+{$ FOR s 1 10.1 2 $}{$= s 5 - $} {$END $}
+
+Float step (first should be integer rest should be floats)
+{$ FOR s 1 10 2.1 $}{$= 5 s / "#.#####" @decfmt "(" s ")" $} {$END $} 

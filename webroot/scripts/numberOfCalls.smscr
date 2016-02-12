@@ -1,0 +1,2 @@
+{$= "text/plain" @setMimeType $}This document was called this many times:
+{$= "brojPoziva" "1" @pparamGet @dup 1 + "brojPoziva" @pparamSet $}
